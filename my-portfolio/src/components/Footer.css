@@ -1,0 +1,26 @@
+.footer {
+    background-color: #222;
+    padding: 20px 0;
+    text-align: center;
+    color: #aaa;
+    margin-top: auto; /* Sayfanın altına yapışmasını sağlar */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-links a {
+    color: #f0f0f0;
+    margin: 0 10px;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #454b40;
+}

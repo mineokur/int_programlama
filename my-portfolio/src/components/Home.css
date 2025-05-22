@@ -1,0 +1,105 @@
+.home-section {
+    text-align: center; /* Metin ve inline/inline-block elemanları yatayda ortalar */
+    padding: 100px 0;
+
+    /* Dikey ve Yatay Ortalamak İçin Flexbox Kullanımı */
+    display: flex;
+    justify-content: center; /* İçeriği yatayda ortalar */
+    align-items: center; /* İçeriği dikeyde ortalar */
+    min-height: calc(100vh - 120px); /* Header ve footer yüksekliğine göre ayarlanabilir.
+                                     Bu, içeriğin en azından tam ekran yüksekliğinin bir kısmını kaplamasını sağlar. */
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+.home-content {
+    /* Bu div'in kendi içeriğini (h1, p) kendi içinde ortalaması için */
+    display: flex;
+    flex-direction: column; /* İçeriği dikey sırala */
+    align-items: center; /* İçeriği yatayda (kendi içinde) ortala */
+    text-align: center; /* Metinlerin kendi içinde ortalanmasını sağlar */
+    max-width: 800px; /* İçeriğin çok geniş olmasını engeller */
+    margin: 0 auto; /* Eğer üst container flexbox kullanmıyorsa yatayda ortalar */
+}
+
+.home-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.home-content .tagline {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ... Diğer buton ve responsive stilleri aynı kalır ... *//* ... diğer stiller ... */
+
+.home-content .tagline {
+    font-size: 1.5em;
+    margin-bottom: 40px; /* Butonlar div'i için boşluk */
+}
+
+.home-buttons { /* Yeni eklenen div için stil */
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Butonlar arasında boşluk bırakır */
+    flex-wrap: wrap; /* Küçük ekranlarda alt alta geçmesini sağlar */
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* border-color da ekleyelim */
+    text-decoration: none; /* Link olduğu için alt çizgiyi kaldırır */
+    display: inline-block; /* Linkler varsayılan olarak inline'dır, padding için blok yapısı */
+}
+
+.primary-btn {
+    background-color: #454b40;
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #454b40;
+    color: #a57b01;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: #454b40;
+    border: 2px solid #454b40;
+}
+
+.secondary-btn:hover {
+    background-color: #454b40;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .home-content h1 {
+        font-size: 2.5em;
+    }
+    .home-content .tagline {
+        font-size: 1.2em;
+    }
+    .home-buttons {
+        flex-direction: column; /* Mobil için dikey sıralama */
+        align-items: center; /* Ortala */
+    }
+    .btn {
+        width: 80%; /* Buton genişliğini ayarla */
+        margin: 10px 0; /* Dikey boşluk */
+    }
+}

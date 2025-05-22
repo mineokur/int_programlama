@@ -1,0 +1,49 @@
+.header {
+    background-color: #222; /* Koyu header arka planı */
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ffffff; /* Logo rengi */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #f0f0f0;
+    font-size: 1.1em;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #454b40; /* Hover rengi */
+}
+
+/* Responsive için basit bir başlangıç */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Mobil cihazlarda menüyü gizle (hamburger menü eklenebilir) */
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+}
