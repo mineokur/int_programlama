@@ -1,0 +1,33 @@
+/* Genel Sıfırlama */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Temel Body Stilleri - Örnek tasarıma uygun koyu tema */
+body {
+  font-family: 'Arial', sans-serif; /* İstediğiniz fontu kullanabilirsiniz */
+  line-height: 1.6;
+  background-color: #1a1a1a; /* Koyu arka plan */
+  color: #f0f0f0; /* Açık yazı rengi */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Link Stilleri */
+a {
+  color: #00bcd4; /* Vurgu rengi */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00a7b8;
+}
+
+/* Global Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
